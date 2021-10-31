@@ -3,5 +3,12 @@
 	<age>39</age>
 	<pets_count>1</pets_count>
 	<salary>1999999</salary>
+	<film>Холодное Сердце</film>
+	<serias>Хороший доктор</serias>
+	<food>Картошка-фри</food>
+	<season>Осень</season>
+	<country>Норвегия</country>
+
+	
 </person>
 
