@@ -1,0 +1,51 @@
+1 где я  -  pwd
+2 создать папку - mkdir 
+3 зайти в папку - cd
+4 создать 3 папки - mkdir 1 2 3
+5 зайти в любую папку -  cd 
+6 создать несколько файлов touch 1.txt 2.txt 3.txt 
+Touch 1.json 2.json
+7 создать 3 папки mkdir  folder1  folder2  folder3 
+8 список содержимого - ls 
+9 открыть любой txt файл - cat file.txt
+10 написать туда что-нибудь, любой текст 
+ nano file.txt
+записать нужный текст
+11 control+O - сохранить текст
+control+X - выйти
+12 выйти из папки на уровень выше cd ..
+13  переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv путь_до_файла/имя_файла(откуда) (путь_до_конца) 
+14 скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp путь_до_нужного файла путь_конечного_места
+15 найти файл по имени - find
+16 просмотреть содержимое в реальном времени (команда grep) изучите как она работает
+tail (имя файла) - последние 10 строк
+tail -f постоянное обновление
+
+cat ( перед grep. вывести искомый в консоль)
+grep
+17  вывести несколько первых строк из текстового файла
+head -n 3(количество строк которые нужно вывести) имя файла
+18 вывести несколько последних строк из текстового файла
+tail -n имя файла
+19 просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less имя файла
+20 вывести дату и время
+date
+
+1*
+dasha@Daria-MacBook-Pro Desktop % curl -X GET http://162.55.220.72:5005/terminal-hw-request
+
+{"Intro":"Hello!! This is your the first response from server","Tasks":{"Task_1":"Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)","result":["Your_String","Your_number"]}}
+                   
+dasha@Daria-MacBook-Pro Desktop % curl -X GET 'http://162.55.220.72:5005/get_method?name=Kolbaska&age=36' 
+["Kolbaska","36"]
+
+
+2*
+mkdir folder1 folder2 folder3
+touch folder1/text_1.txt folder1/text_2.txt folder1/text_3.txt folder1/json_1.json folder1/json_2.json
+mkdir folder1/folder4 folder1/folder5 folder1/folder6
+ls -la
+mv folder1/text_1.txt folder2/text_1.txt
