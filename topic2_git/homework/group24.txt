@@ -15,7 +15,7 @@ git branch check_lists
 git branch bag_reports
 git branch sql
 git branch charles
-git branch mobil_testing
+git branch mobile_testing
 
 2. Запушить все ветки на внешний репозиторий
 git push
