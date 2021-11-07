@@ -18,11 +18,11 @@ git branch charles
 git branch mobile_testing
 
 2. Запушить все ветки на внешний репозиторий
-git push
+git push --all
 
 3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
  git checkout bug_reports
-touch bug_report_structure.txt
+touch topic2_git/bug_report_structure.txt
 
 4. Запушить структуру багрепорта на внешний репозиторий
 git add .
