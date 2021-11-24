@@ -42,7 +42,7 @@ where created_on='2021-03-26 00:00:00';
 
 -- 10. Вывести пользователей где в имени есть слово Анна
 select * from students s 
-where name='Анна';
+where name = '%Анна%';
 
 
 -- 11. Вывести пользователей где в имени в конце есть 8
@@ -109,14 +109,67 @@ where id < 30;
 select *
 from students s 
 where id < 27 or id > 88
+
+
 -- 22. Вывести пользователя у которых id меньше либо равно 37
+select *
+from students s 
+where id <= 37
+
+
 -- 23. Вывести пользователя у которых id больше либо равно 37
+select *
+from students s 
+where id >= 37
+
+
 -- 24. Вывести пользователя у которых id больше 80 но меньше 90
+select *
+from students s 
+where id >80 and id < 90
+
 -- 25. Вывести пользователя у которых id между 80 и 90
+select *
+from students s 
+where id >80 and id < 90
+
 -- 26. Вывести пользователей где password равен 12333, 1m313, 123313
+select *
+from students s 
+where password in ('12333', '1m313', '123313')
+
+
 -- 27. Вывести пользователей где created_on равен 2020-10-03 00:00:00, 2021-05-19 00:00:00, 2021-03-26 00:00:00
+select *
+from students s 
+where created_on in ('2020-10-03 00:00:00', '2021-05-19 00:00:00', '2021-03-26 00:00:00')
+
+
 -- 28. Вывести минимальный id 
+select min (id)
+from students s 
+
+
 -- 29. Вывести максимальный.
+select max (id)
+from students s 
+
+
 -- 30. Вывести количество пользователей
+select count(name)
+from students s 
+
+
 -- 31. Вывести id пользователя, имя, дату создания пользователя. Отсортировать по порядку возрастания даты добавления пользоватлеля.
+select id, name, created_on
+from students s 
+order by created_on asc 
+
 -- 32. Вывести id пользователя, имя, дату создания пользователя. Отсортировать по порядку убывания даты добавления пользоватлеля.
+select id, name, created_on
+from students s 
+order by created_on desc 
+
+
+
+
