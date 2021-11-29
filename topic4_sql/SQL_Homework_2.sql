@@ -1,10 +1,15 @@
 drop table if exists employees;
 drop table if exists salary;
 drop table if exists employees_salary; 
+drop table if exists roles;
+drop table if exists roles_employee;
+
 
 drop sequence if exists public.employees_id_seq;
 drop sequence if exists public.employees_salary_id_seq;
 drop sequence if exists public.salary_id_seq;
+drop sequence if exists public.roles_id_seq;
+drop sequence if exists public.roles_employee_id_seq;
 
 
 create table employees( 
