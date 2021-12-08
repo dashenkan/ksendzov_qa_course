@@ -37,8 +37,8 @@ where es.salary_id is null
  --6. Вывести всех работников с названиями их должности
  select e.employee_name, r.role_name
  from employees e
- inner join roles_employee re on re.employee_id = e.id
- inner join roles r on r.id = re.role_id
+ left join roles_employee re on re.employee_id = e.id
+ left join roles r on r.id = re.role_id
  
  
 -- 7. Вывести имена и должность только Java разработчиков
@@ -46,18 +46,15 @@ select e.employee_name, r.role_name
 from employees e 
 inner join roles_employee re on re.employee_id = e.id
 inner join roles r on r.id = re.role_id
-where r.role_name like 'Junior Java developer'
- 		or r.role_name like 'Middle Java developer'
- 		or r.role_name like'Senior Java developer'
+where r.role_name like '%Java developer'
  
 -- 8. Вывести имена и должность только Python разработчиков
  select e.employee_name, r.role_name
  from employees e
  inner join roles_employee re on re.employee_id = e.id 
  inner join roles r on r.id = re.role_id
- 		where r.role_name like 'Junior Python developer' 
-		or r.role_name like'Middle Python developer' 		
-		or r.role_name like 'Senior Python developer'
+ 		where r.role_name like '%Python developer' 
+	
 	
 	
  --9. Вывести имена и должность всех QA инженеров
@@ -66,7 +63,7 @@ where r.role_name like 'Junior Java developer'
  inner join roles_employee re on re.employee_id = e.id 
  inner join roles r on r.id = re.role_id 
  where r.role_name  like '%QA engineer'
-;
+
  
  --10. Вывести имена и должность ручных QA инженеров
  select e.employee_name, r.role_name
@@ -141,7 +138,7 @@ where r.role_name like 'Junior Java developer'
  inner join salary s on s.id = es.salary_id 
  inner join roles_employee re on re.employee_id = e.id 
  inner join roles r on r.id = re.role_id 
- where r.role_name like 'Junior Python developer'
+ where r.role_name = 'Junior Python developer'
  
  
  --18. Вывести имена и зарплаты Middle JS разработчиков
@@ -151,7 +148,7 @@ where r.role_name like 'Junior Java developer'
  inner join salary s on s.id = es.salary_id 
  inner join roles_employee re on re.employee_id = e.id 
  inner join roles r on r.id = re.role_id 
- where r.role_name like 'Middle JavaScript developer'
+ where r.role_name = 'Middle JavaScript developer'
  
  
  --19. Вывести имена и зарплаты Senior Java разработчиков
@@ -161,7 +158,7 @@ where r.role_name like 'Junior Java developer'
  inner join salary s on s.id = es.salary_id 
  inner join roles_employee re on re.employee_id = s.id 
  inner join roles r on r.id = re.role_id 
- where r.role_name like 'Senior Java developer'
+ where r.role_name = 'Senior Java developer'
  
  
  --20. Вывести зарплаты Junior QA инженеров
