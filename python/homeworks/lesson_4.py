@@ -147,13 +147,3 @@ run = True
 #         print('If_item =', item)
 #         continue
 #     print('End_iteration =', item)
-
-
-for item in range(0,1000):
-    print('1');
-    print('2');
-    continue
-    print('3');
-    print('4');
-    print('5');
-    print('6');
