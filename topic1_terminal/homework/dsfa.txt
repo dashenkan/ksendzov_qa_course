@@ -1,0 +1,38 @@
+dir_1/ABC/tf_3.txt:the second 2
+dir_1/ABC/tf_2.txt:- the second 2
+dir_1/ABC/tf_2.txt:the sec 3
+terminal_2.txt:- the second 2
+terminal_2.txt:the second 2
+terminal_2.txt:9. Через cat добавить в текстовый файл tf_3.txt строку “the second 2”
+terminal_2.txt:the second 2
+terminal_2.txt: 10. Через cat добавить в текстовый файл tf_3.txt строку “the sec 2”
+terminal_2.txt:the sec 2 
+terminal_2.txt:11. Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
+terminal_2.txt:the sec 3 
+terminal_2.txt:23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке
+terminal_2.txt:grep sec *
+terminal_2.txt:24. Найти строки в файлах где есть комбинация букв “sec” в любом регистре в текущей папке
+terminal_2.txt:grep -i sec *
+terminal_2.txt:25. Найти строки в файлах где есть только комбинация букв “sec” в текущей папке
+terminal_2.txt:grep -w sec * 
+terminal_2.txt:26. Найти строки в файлах где есть только комбинация букв “sec” в любом регистре в текущей папке
+terminal_2.txt:grep -w -i sec * 
+terminal_2.txt:27. Найти строки в файлах где есть комбинация букв “second” в текущей папке
+terminal_2.txt:grep . -w second *
+terminal_2.txt:28. Найти строки в файлах где есть комбинация букв “second” в любом регистре в текущей папке
+terminal_2.txt:grep -w -i second *
+terminal_2.txt:29. Найти строки в файлах где есть комбинация букв “second” во всех папках ниже уровнем
+terminal_2.txt:grep -r second
+terminal_2.txt:30. Найти только путь и название файла в строках которых есть комбинация букв “second” в текущей папке
+terminal_2.txt:grep -wrl "second" $(pwd)
+terminal_2.txt:31. Найти все строки во всех файлах где нет комбинации “second”
+terminal_2.txt:grep -wrlL "second" 
+terminal_2.txt:32. Найти только название и путь к файлам где нет комбинации “second”
+terminal_2.txt:grep -wrlL "second" $(pwd)
+terminal_2.txt:36. Команда в одну строку. Переместить в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
+terminal_2.txt:grep -rl sec * | xargs -n1 -I {} mv {} /Users/dasha/study/ksendzov_qa_course/topic1_terminal/homework/dir_1/ABC/{}
+terminal_2.txt:37. Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
+terminal_2.txt:grep -rl sec * | xargs -n1 -I {} cp {} /Users/dasha/study/ksendzov_qa_course/topic1_terminal/homework/dir_1/inner_dir_1/
+terminal_2.txt:38. Команда в одну строку. Найти все строки c “sec” во всех текстовых файлах, скопировать и вставить эти строки в один новый созданный текстовый файл.  
+terminal_2.txt:grep -rh sec * > dsfa.txt
+terminal_2.txt:39. Команда в одну строку. Удалить текстовые файлы у которых в содержимом есть слово “sec”  grep -rl sec * | xargs -n1 -I {} rm {}     
